@@ -4,7 +4,7 @@ services:
       context: ./backend
     restart: unless-stopped
     environment:
-      DATABASE_URL: sqlite:////data/route53.db
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////data/route53.db}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY:?Set JWT_SECRET_KEY in .env}
       CORS_ORIGINS: ${CORS_ORIGINS:?Set CORS_ORIGINS in .env}
     volumes:

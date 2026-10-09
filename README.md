@@ -53,7 +53,7 @@ The app is served at `https://<PUBLIC_DOMAIN>`. Caddy obtains and renews the TLS
 - `hosted_zones`: owner, domain, public/private type, comment, caller reference, and record count. Deleting a zone cascades to its records.
 - `dns_records`: hosted-zone reference, name, type, TTL, JSON-encoded values, routing policy, alias flag, comment, and timestamps. New zones receive default NS and SOA records.
 
-All resources are scoped to the authenticated user through their hosted zones. Configure `DATABASE_URL` to choose the SQLAlchemy database URL; SQLite is the supported persistent deployment database. Configure `JWT_SECRET_KEY` and comma-separated `CORS_ORIGINS` in hosted environments.
+All resources are scoped to the authenticated user through their hosted zones. Configure `DATABASE_URL` to choose the SQLAlchemy database URL; SQLite and PostgreSQL are supported. For Neon, set the provider's PostgreSQL connection string in the ignored local `.env` file. Configure `JWT_SECRET_KEY` and comma-separated `CORS_ORIGINS` in hosted environments.
 
 ### API Overview
 
