@@ -1,0 +1,389 @@
+@import "tailwindcss";
+
+:root {
+  --aws-orange: #ff9900;
+  --aws-dark: #232f3e;
+  --aws-blue: #0073bb;
+  --aws-light-blue: #00a1c9;
+  --aws-green: #1d8102;
+  --aws-red: #d13212;
+  --aws-gray: #545b64;
+  --aws-light-gray: #f2f3f3;
+  --aws-border: #d5d9d9;
+  --aws-text: #16191f;
+  --aws-link: #0073bb;
+}
+
+body {
+  font-family: 'Amazon Ember', 'Helvetica Neue', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--aws-text);
+  background-color: #f2f3f3;
+}
+
+/* AWS Button Styles */
+.btn-aws-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #dd6b10;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  background-color: #ec7211;
+  color: #fff;
+  gap: 4px;
+  white-space: nowrap;
+}
+.btn-aws-primary:hover:not(:disabled) {
+  background-color: #cf5b06;
+}
+.btn-aws-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-aws-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #879596;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  background-color: #fff;
+  color: #16191f;
+  gap: 4px;
+  white-space: nowrap;
+}
+.btn-aws-secondary:hover:not(:disabled) {
+  background-color: #f2f3f3;
+}
+.btn-aws-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-aws-danger {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #d13212;
+  cursor: pointer;
+  transition: all 0.15s;
+  background-color: #fff;
+  color: #d13212;
+  gap: 4px;
+  white-space: nowrap;
+}
+.btn-aws-danger:hover:not(:disabled) {
+  background-color: #fdf3f0;
+}
+.btn-aws-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* AWS Table */
+.aws-table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.aws-table th {
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 2px solid #d5d9d9;
+  background-color: #fafafa;
+  color: #16191f;
+  white-space: nowrap;
+}
+.aws-table td {
+  padding: 8px 16px;
+  border-bottom: 1px solid #eaeded;
+  color: #16191f;
+  vertical-align: middle;
+}
+.aws-table tr:hover td {
+  background-color: #f4f4f4;
+}
+
+/* AWS Input */
+.aws-input {
+  display: block;
+  padding: 5px 10px;
+  font-size: 13px;
+  border: 1px solid #879596;
+  border-radius: 4px;
+  color: #16191f;
+  background-color: #fff;
+  outline: none;
+  width: 100%;
+}
+.aws-input:focus {
+  border-color: #00a1c9;
+  box-shadow: 0 0 0 2px rgba(0,161,201,0.2);
+}
+
+/* AWS Select */
+.aws-select {
+  display: block;
+  padding: 5px 10px;
+  font-size: 13px;
+  border: 1px solid #879596;
+  border-radius: 4px;
+  color: #16191f;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.aws-select:focus {
+  border-color: #00a1c9;
+}
+
+/* AWS Card/Panel */
+.aws-panel {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* AWS Badge */
+.badge-public {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 12px;
+  background-color: #d5e8fb;
+  color: #00609c;
+  font-weight: 500;
+}
+.badge-private {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 12px;
+  background-color: #e8f4e8;
+  color: #1d8102;
+  font-weight: 500;
+}
+
+/* AWS notification/alert */
+.aws-alert-success {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #1d8102;
+  font-size: 13px;
+  background-color: #f2f8f0;
+  color: #1d8102;
+}
+.aws-alert-error {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #d13212;
+  font-size: 13px;
+  background-color: #fdf3f0;
+  color: #d13212;
+}
+.aws-alert-info {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #0073bb;
+  font-size: 13px;
+  background-color: #f1faff;
+  color: #0073bb;
+}
+
+/* Sidebar */
+.aws-sidebar {
+  background-color: #fff;
+  border-right: 1px solid #d5d9d9;
+  width: 220px;
+  min-height: calc(100vh - 79px);
+}
+.aws-sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #16191f;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  border-left: 3px solid transparent;
+}
+.aws-sidebar-item:hover {
+  background-color: #f2f3f3;
+}
+.aws-sidebar-item.active {
+  background-color: #f2f3f3;
+  border-left-color: #ec7211;
+  font-weight: 600;
+}
+
+/* Checkbox */
+.aws-checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  accent-color: #0073bb;
+}
+
+/* Pagination */
+.aws-pagination-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #0073bb;
+  background: #fff;
+  transition: background-color 0.1s;
+}
+.aws-pagination-btn:hover:not(:disabled) {
+  background-color: #f2f3f3;
+}
+.aws-pagination-btn.active {
+  background-color: #ec7211;
+  border-color: #ec7211;
+  color: #fff;
+}
+.aws-pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d5d9d9;
+  border-top-color: #0073bb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Link style */
+.aws-link {
+  color: #0073bb;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.aws-link:hover {
+  text-decoration: underline;
+  color: #005ea5;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 16px;
+  text-align: center;
+  color: #879596;
+}
+
+/* Breadcrumb */
+.aws-breadcrumb {
+  font-size: 12px;
+  color: #879596;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.aws-breadcrumb a {
+  color: #0073bb;
+  text-decoration: none;
+}
+.aws-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.route53-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .aws-sidebar {
+    display: none;
+  }
+
+  .route53-mobile-nav {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--aws-border);
+    background: #fff;
+    scrollbar-width: thin;
+  }
+
+  .route53-mobile-nav a {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: var(--aws-text);
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .route53-mobile-nav a.active {
+    border-color: var(--aws-border);
+    background: #f8f8f8;
+    font-weight: 600;
+  }
+
+  .route53-main {
+    min-width: 0;
+  }
+
+  .route53-main > div {
+    padding: 16px;
+  }
+}
