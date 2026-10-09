@@ -29,9 +29,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#232f3e' }}>
       {/* AWS-style top bar */}
       <div className="h-10 flex items-center px-6" style={{ backgroundColor: '#232f3e', borderBottom: '1px solid #3a4553' }}>
-        <svg width="60" height="36" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M287.4 199.1L225.6 375h41l14.3-44.4h61.6L356.7 375h42.2l-62.6-175.9h-49zm3.4 97.7l21-65.3 21 65.3h-42zm153.1-97.7h-38.7V375h38.7V199.1zM565.8 288c0-22.2-12-37.4-35.9-43.8l-21.6-6.1c-10.8-3-15.3-8.3-15.3-16.4 0-10.2 7.5-16.8 20.2-16.8 13.3 0 21.2 7.5 22.5 21.1h36.4c-2.3-31.5-24.2-51-59.2-51-34.3 0-57.7 20.2-57.7 49.5 0 21.5 11.2 36.1 34.4 42.4l22.5 6.3c12 3.4 16.5 8.5 16.5 17.4 0 10.8-8.5 17.7-22.5 17.7-15.3 0-24.7-8.3-26.1-23.8h-37c1.8 33.3 25.3 54.4 63.1 54.4 36.7 0 60.2-21.5 60.2-50.9zm100.6-88.9h-82v175.9h82c51 0 84.4-34.4 84.4-88.3 0-53.5-33.4-87.6-84.4-87.6zm-1.4 141.2h-42.2V233.8h42.2c28 0 45.3 20.2 45.3 53.6s-17.3 53.9-45.3 53.9z" fill="#FF9900"/>
-        </svg>
+        <span className="text-white font-bold text-xl" style={{ color: '#ff9900' }}>aws</span>
       </div>
 
       <div className="flex-1 flex flex-col items-center justify-center py-12 px-4">
